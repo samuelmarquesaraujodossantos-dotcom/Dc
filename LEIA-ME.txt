@@ -1,0 +1,16 @@
+DEEP CHAINS — projeto para gerar o APK (Capacitor)
+
+Sem celular nem Android Studio (o jeito mais fácil):
+1. Crie um repositório vazio no GitHub e envie todo o conteúdo desta pasta (inclusive a pasta .github).
+2. Abra a aba "Actions" > "Build APK" > "Run workflow".
+3. Em uns 5 minutos, baixe "DeepChains-apk" no fim da execução. Dentro está app-debug.apk.
+4. Copie para o celular e instale (permita "instalar apps desconhecidos").
+
+Com Android Studio / JDK 17 no computador:
+  npm install
+  npx cap add android
+  npx cap sync android
+  cd android && ./gradlew assembleDebug
+  (APK em android/app/build/outputs/apk/debug/app-debug.apk)
+
+O jogo fica em www/index.html (arquivo único). As fontes vêm do Google Fonts, então a primeira abertura precisa de internet.
